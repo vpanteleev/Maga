@@ -14186,7 +14186,7 @@ ParticleSystem:
   moveWithTransform: 1
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 1
-  randomSeed: 1634905892
+  randomSeed: -527482343
   InitialModule:
     serializedVersion: 3
     enabled: 1
@@ -20196,6 +20196,7 @@ GameObject:
   - component: {fileID: 1869423112}
   - component: {fileID: 1869423115}
   - component: {fileID: 1869423114}
+  - component: {fileID: 1869423116}
   m_Layer: 0
   m_Name: whiteclown_n_hallin@Idle
   m_TagString: Untagged
@@ -20252,9 +20253,9 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 1869423112}
-          m_MethodName: SetTrigger
-          m_Mode: 5
+        - m_Target: {fileID: 1869423116}
+          m_MethodName: ThrowInBoxes
+          m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
             m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -20280,6 +20281,22 @@ MeshCollider:
   m_InflateMesh: 0
   m_SkinWidth: 0.01
   m_Mesh: {fileID: 4300000, guid: 65995e3d2dae84aeca5bbc69adde6d03, type: 3}
+--- !u!114 &1869423116
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1869423111}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9892a19fe095e4d90859365e8a2a2262, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  handAnchor: {fileID: 1778670016}
+  targetAnchor: {fileID: 2042544628}
+  platePrefab: {fileID: 1857266154057310, guid: 26ac56dd461825d48b3534bb7594f7e7,
+    type: 2}
+  speed: 10
 --- !u!1 &1869794257
 GameObject:
   m_ObjectHideFlags: 0
