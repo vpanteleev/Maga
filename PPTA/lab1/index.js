@@ -1,7 +1,7 @@
 
-let regularRight = /^[A-Z]*->[a-z]+[A-Z]$/;
-let regularLeft = /^[A-Z]*->[A-Z][a-z]+$/;
-let contextFree = /^[A-Z]*->[A-Za-z]*/;
+let regularRight = /^[A-Z]->[a-z]+[A-Z]$/;
+let regularLeft = /^[A-Z]->[A-Z][a-z]+$/;
+let contextFree = /^[A-Z]->[A-Za-z]*/;
 let contextSensetive = /^[a-zA-Z]*->[A-Za-z]*/;
 
 function checkType(rule) {
@@ -24,23 +24,12 @@ function checkType(rule) {
     return "Recursively enumerable"
 }
 
-let myRules = [
-    'b->aD',
-    'bC->bc',
-    'Vd->sdS',
-    'Cb->CZ',
-]
-
 let testRules = [
     'Q->cSc',
     'A->Xa',
     'C->cC',
     'Ad->Ddc',
 ]
-
-let myResult = myRules.map(checkType)
-
-console.log('myResult \n', myResult);
 
 let testResult = testRules.map(checkType)
 

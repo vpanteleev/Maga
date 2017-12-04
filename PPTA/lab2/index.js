@@ -1,5 +1,7 @@
 //Panteleev Data
-
+//
+///dot -Tpng fsm.gv -o panteleev.png
+//
 let terminals = ['0', '1'];
 let nonTerminals = ['S','C','D', 'N'];
 let nonTerminalForIntersection = ['C','D', 'N'];
@@ -146,3 +148,16 @@ Object.keys(determinateGraph).forEach(key => {
 
 console.log("Normalized Graph\n");
 console.log(normalizedGraph);
+
+// q1 -> S  [ label = "a" ];
+Object.keys(normalizedGraph).forEach(state => {
+    let transfers = normalizedGraph[state] || {};
+    terminals.forEach(terminal => {
+        if(state && transfers[terminal] && terminal) {
+            console.log(`${state} -> ${transfers[terminal]}  [ label = "${terminal}" ];`);
+        }
+    })
+});
+
+
+//Remove non do
